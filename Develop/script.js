@@ -14,8 +14,16 @@ for(i = 9; i < 18; i++){
     }else{
         var color = "future"
     }
+    if(i < 12){
+        var hourChange = i + "AM"
+    }else if(i==12){
+        var hourChange = i + "PM"
+    }
+    else{
+        var hourChange = (i - 12)+"PM"
+    } 
     htmlCode += ` <div class="row" >
-    <h2>${i}</h2>
+    <h2>${hourChange}</h2>
     <textarea class="${color}" id="${i}" value="${storedEntry}" placeholder="${storedEntry}" cols="90"></textarea>
     <button class="saveBtn">Save</button>
   </div>`
