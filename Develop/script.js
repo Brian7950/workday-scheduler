@@ -10,3 +10,10 @@ for(i = 9; i < 18; i++){
   </div>`
 }
 $(".container").html(htmlCode);
+
+$(".saveBtn").click(function(){
+    var textInput = $(this).siblings("textarea").val();
+    var timeStamp = $(this).siblings("textarea").attr("id");
+    console.log(textInput,timeStamp);
+    localStorage.setItem(timeStamp , textInput);
+})
