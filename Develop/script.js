@@ -1,10 +1,10 @@
-var dateToday = moment();
-console.log(dateToday._d);
+var dateToday = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
 $("#currentDay").text(dateToday);
+
 var htmlCode = "";
 var currentHour = moment().hours()
 
-for(i = 9; i < 18; i++){
+for(i = 7; i < 20; i++){
     var storedEntry = localStorage.getItem(i) || "";
     if(i < currentHour){
         var color = "past"
